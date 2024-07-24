@@ -70,7 +70,7 @@ function App() {
           </div>
         </div>
 
-        <div className="task-list">
+        <div className={`task-list ${tasks.length === 0 ? 'no-scroll' : ''}`}>
           {tasks.length === 0 ? (
             <Empty />
           ) : (

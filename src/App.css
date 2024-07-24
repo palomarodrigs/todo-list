@@ -1,5 +1,4 @@
 main {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +9,10 @@ main {
   overflow-y: auto;
   max-height: 30.5rem;
   padding-right: 0.5rem;
+}
+
+.task-list.no-scroll {
+  overflow: hidden;
 }
 
 .info {
