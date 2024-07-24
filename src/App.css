@@ -3,3 +3,27 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 4rem 0 1.5rem;
+}
+
+.created-tasks,
+.concluded-tasks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.created-tasks p {
+  color: var(--blue);
+}
+
+.concluded-tasks p {
+  color: var(--purple);
+}
