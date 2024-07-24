@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: -2rem;
+}
+
+input {
+  width: 70vw;
+  max-width: 45rem;
+  height: 3.37rem;
+  padding: 1rem;
+  color: var(--gray-100);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: var(--gray-500);
+}
+
+input:focus {
+  border-color: var(--purple-dark);
+}
+
+input::placeholder {
+  color: var(--gray-300);
+}
+
+button {
+  width: 5.625rem;
+  height: 3.37rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: var(--gray-100);
+  border-radius: 8px;
+  background-color: var(--blue-dark);
+}
+
+button p {
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--blue);
+  transition: background-color 0.3s;
+}
