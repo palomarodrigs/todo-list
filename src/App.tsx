@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 import { Header } from './components/header'
 import { NewTask } from './components/newTask'
 import { Counter } from './components/counter'
+import { Empty } from './components/empty'
+import { Task } from './components/task'
 
 interface ITask {
   id: number
@@ -24,6 +26,20 @@ function App() {
 
     localStorage.setItem('@todo:tasks', JSON.stringify([...tasks, newTask]))
     setTasks([...tasks, newTask])
+  }
+
+  const handleDeleteTask = (id: number) => {
+    const tasksWithoutDeletedOne = tasks.filter((task) => task.id !== id)
+    setTasks(tasksWithoutDeletedOne)
+    localStorage.setItem('@todo:tasks', JSON.stringify(tasksWithoutDeletedOne))
+  }
+
+  const handleToggleTask = (id: number) => {
+    const markTaskAsChecked = tasks.map((task) =>
+      task.id === id ? { ...task, isChecked: !task.isChecked } : task,
+    )
+    setTasks(markTaskAsChecked)
+    localStorage.setItem('@todo:tasks', JSON.stringify(markTaskAsChecked))
   }
 
   useEffect(() => {
@@ -53,6 +69,20 @@ function App() {
             <Counter count={tasks.filter((task) => task.isChecked).length} />
           </div>
         </div>
+
+        {tasks.length === 0 ? (
+          <Empty />
+        ) : (
+          tasks.map((task) => (
+            <Task
+              key={task.id}
+              content={task.content}
+              isChecked={task.isChecked}
+              onDelete={() => handleDeleteTask(task.id)}
+              onToggle={() => handleToggleTask(task.id)}
+            />
+          ))
+        )}
       </section>
     </main>
   )
