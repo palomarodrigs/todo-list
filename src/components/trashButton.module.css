@@ -1,0 +1,15 @@
+.trashButton {
+  width: 1rem;
+  height: 1rem;
+  align-self: flex-start;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-300);
+  background: transparent;
+}
+
+.trashButton:hover {
+  color: var(--danger);
+  transition: color 0.2s;
+}
