@@ -1,9 +1,9 @@
 import styles from './counter.module.css'
 
 interface CounterProps {
-  count: number
+  children: React.ReactNode
 }
 
-export function Counter({ count }: CounterProps) {
-  return <div className={styles.counter}>{count}</div>
+export function Counter({ children }: CounterProps) {
+  return <div className={styles.counter}>{children}</div>
 }

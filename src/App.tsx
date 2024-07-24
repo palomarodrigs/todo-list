@@ -60,13 +60,15 @@ function App() {
           <div className="created-tasks">
             <p>Tarefas criadas</p>
 
-            <Counter count={tasks.length} />
+            <Counter>{tasks.length}</Counter>
           </div>
 
           <div className="concluded-tasks">
             <p>Concluídas</p>
 
-            <Counter count={tasks.filter((task) => task.isChecked).length} />
+            <Counter>
+              {tasks.filter((task) => task.isChecked).length} de {tasks.length}
+            </Counter>
           </div>
         </div>
 
