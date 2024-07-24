@@ -1,0 +1,20 @@
+.emptyContent {
+  width: 100%;
+  border-top: 1px solid var(--gray-400);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.emptyContent img {
+  margin: 4rem 0 1rem;
+}
+
+.emptyTasks {
+  line-height: 140%;
+  color: var(--gray-300);
+  text-align: center;
+}
+
+.emptyTasks p {
+  font-weight: bold;
+}
