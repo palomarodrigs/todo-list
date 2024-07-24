@@ -25,7 +25,7 @@ input::placeholder {
   color: var(--gray-300);
 }
 
-button {
+.newTaskButton {
   width: 5.625rem;
   height: 3.37rem;
   display: flex;
@@ -40,11 +40,11 @@ button {
   background-color: var(--blue-dark);
 }
 
-button p {
+.newTaskButton p {
   font-weight: bold;
 }
 
-button:hover {
+.newTaskButton:hover {
   background-color: var(--blue);
   transition: background-color 0.3s;
 }

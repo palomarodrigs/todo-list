@@ -7,7 +7,7 @@ export function NewTask() {
     <div className={styles.wrapper}>
       <input type="text" placeholder="Adicione uma tarefa" />
 
-      <button>
+      <button className={styles.newTaskButton}>
         <p>Criar</p>
         <img src={Plus} />
       </button>
