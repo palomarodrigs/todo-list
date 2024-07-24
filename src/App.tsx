@@ -70,19 +70,21 @@ function App() {
           </div>
         </div>
 
-        {tasks.length === 0 ? (
-          <Empty />
-        ) : (
-          tasks.map((task) => (
-            <Task
-              key={task.id}
-              content={task.content}
-              isChecked={task.isChecked}
-              onDelete={() => handleDeleteTask(task.id)}
-              onToggle={() => handleToggleTask(task.id)}
-            />
-          ))
-        )}
+        <div className="task-list">
+          {tasks.length === 0 ? (
+            <Empty />
+          ) : (
+            tasks.map((task) => (
+              <Task
+                key={task.id}
+                content={task.content}
+                isChecked={task.isChecked}
+                onDelete={() => handleDeleteTask(task.id)}
+                onToggle={() => handleToggleTask(task.id)}
+              />
+            ))
+          )}
+        </div>
       </section>
     </main>
   )
